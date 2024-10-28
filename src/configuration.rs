@@ -21,7 +21,7 @@ pub fn get_configuration() -> Result<Settings, config::ConfigError> {
         ))
         .build()?;
 
-    return settings.try_deserialize::<Settings>();
+    settings.try_deserialize::<Settings>()
 }
 
 impl DatabseSettings {
